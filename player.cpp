@@ -43,14 +43,15 @@ void Player:: setup(float fieldY)
 void Player::update()
 {
 	if (m_isDead) return;
-
 	m_pos += m_vec;
 	bool isField = false;
+
 	if (m_pos.y > m_fieldY - m_graphSize.y)
 	{
 		m_pos.y = m_fieldY - m_graphSize.y;
 		isField = true;
 	}
+
 
 	// ƒL[“ü—Íˆ—
 	int padState = GetJoypadInputState(DX_INPUT_KEY_PAD1);
